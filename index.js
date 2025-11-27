@@ -12,6 +12,9 @@ const { isAscii } = require("buffer");
 
 const app = express();
 const PORT = 3000;
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server running on port ${PORT}`);
+});
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
@@ -66,6 +69,8 @@ app.get("/", (request, response) => {
     }
     response.render("index");
 });
+
+
 
 // GET /login - Render login form
 app.get("/login", (req, res) => {
