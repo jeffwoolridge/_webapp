@@ -205,8 +205,16 @@ app.post("/logout", (request, response) => {
 });
 
 // Start the server
-const PORT = 3000
-app.listen(PORT, '0.0.0.0', () => {
+// UNCOMMENT AND USE FOR PROD
+//const PORT = 3000
+//app.listen(PORT, '0.0.0.0', () => {
+//    console.log(`Server is running on http://localhost:${PORT}`);
+//    console.log(`Default users:
+//    Admin - Email: admin@example.com
+//    User - Email: user@example.com`);
+// });
+
+app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
     console.log(`Default users:
     Admin - Email: admin@example.com

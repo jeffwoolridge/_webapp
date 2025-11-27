@@ -19,5 +19,15 @@
     "express": "^4.21.1",
     "express-session": "^1.18.1",
     "jest": "^30.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffwoolridge/_webapp.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jeffwoolridge/_webapp/issues"
+  },
+  "homepage": "https://github.com/jeffwoolridge/_webapp#readme"
 }
