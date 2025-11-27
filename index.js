@@ -12,9 +12,7 @@ const { isAscii } = require("buffer");
 
 const app = express();
 const PORT = 3000;
-app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server running on port ${PORT}`);
-});
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
@@ -209,7 +207,7 @@ app.post("/logout", (request, response) => {
 });
 
 // Start the server
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server is running on http://localhost:${PORT}`);
     console.log(`Default users:
     Admin - Email: admin@example.com
