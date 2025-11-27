@@ -1,0 +1,33 @@
+<%- include('partials/header', { title: "Event Landing" }) %>
+  <div class="container">
+    <div class="login-container">
+      <h1>Login</h1>
+
+      <% if (success) { %>
+        <div class="success-message"><%= success %></div>
+      <% } %>
+
+      <% if (error) { %>
+        <div class="error-message"><%= error %></div>
+      <% } %>
+
+      <form action="/login" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" autocomplete="email" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" autocomplete="current-password" required>
+        
+        <button type="submit">Login</button>
+      </form>
+      <p><a href="/">Go back</a></p>
+
+      <script>
+        setTimeout(() => {
+          const msg = document.querySelector('.success-message');
+          if (msg) msg.style.display = 'none';
+        }, 3000);
+      </script>
+    </div>
+  </div>
+<%- include('partials/header', { title: "Event Landing" }) %>

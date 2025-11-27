@@ -1,0 +1,39 @@
+<%- include('partials/header', { title: "Event Dashboard" }) %>
+
+<div class="container">
+    <h1>Welcome <%= user.username %>!</h1>
+
+    <% if (user.role === "admin") { %>
+        <h2>Users & RSVP Status</h2>
+        <% if (USERS && USERS.length > 0) { %>
+            <ul class="rsvp-list">
+                <% USERS.forEach(u => { %>
+                    <li>
+                        <span class="rsvp-username"><%= u.username %></span> - 
+                        <% if (u.hasRSVPed) { %>
+                            RSVP'd at <%= new Date(u.rsvpTime).toLocaleString() %>
+                        <% } else { %>
+                            Not RSVP'd
+                        <% } %>
+                    </li>
+                <% }) %>
+            </ul>
+        <% } else { %>
+            <p>No users found.</p>
+        <% } %>
+    <% } else { %>
+        <% if (!user.hasRSVPed) { %>
+            <form action="/event" method="POST">
+                <button type="submit" class="rsvp-button">RSVP Now</button>
+            </form>
+        <% } else { %>
+            <p class="rsvp-confirmed">You have RSVP'd on <%= new Date(user.rsvpTime).toLocaleString() %>.</p>
+        <% } %>
+    <% } %>
+
+    <form action="/logout" method="POST">
+        <button type="submit" class="logout-button">Logout</button>
+    </form>
+</div>
+
+<%- include('partials/footer') %>

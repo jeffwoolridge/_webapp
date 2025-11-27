@@ -1,0 +1,23 @@
+{
+  "name": "rsvp-portal",
+  "version": "1.0.0",
+  "description": "A simple app to practice logging in users, registering users and creating authenticated routes by allowing users to RSVP to an event",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew English",
+  "license": "MIT",
+  "dependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/ejs": "^3.1.5",
+    "@types/express": "^5.0.0",
+    "@types/express-session": "^1.18.0",
+    "bcrypt": "^5.1.1",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "jest": "^30.2.0"
+  }
+}

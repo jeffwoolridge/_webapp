@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f0f4ff, #dff6e4);
+    color: #333;
+}
+
+.container {
+    background: #f9f9f9;
+    border-radius: 25px;
+    padding: 40px 35px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 12px 12px 24px #d1d9e6, -12px -12px 24px #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.6s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container:hover {
+    transform: translateY(-6px);
+    box-shadow: 16px 16px 32px #d1d9e6, -16px -16px 32px #ffffff;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #4a4a4a;
+}
+
+.error-message {
+    background: #ffd6d6;
+    color: #b00020;
+    padding: 10px 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+label {
+    font-weight: 500;
+    color: #555;
+}
+
+input {
+    padding: 12px 16px;
+    border-radius: 15px;
+    border: none;
+    background: #f0f3f7;
+    box-shadow: inset 4px 4px 8px #d1d9e6, inset -4px -4px 8px #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input:focus {
+    box-shadow: inset 2px 2px 6px #d1d9e6, inset -2px -2px 6px #ffffff, 0 0 5px rgba(106,17,203,0.2);
+    background: #f7f9fc;
+}
+
+button {
+    padding: 14px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 6px 6px 16px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 8px 8px 20px rgba(0,0,0,0.15);
+}
+
+p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.95rem;
+}
+
+a {
+    color: #6a11cb;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #2575fc;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.container form {
+    margin-top: 20px; 
+}
+
+.index-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f0f4ff, #dff6e4);
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.index-container h1 {
+    font-size: 3rem;
+    color: #4a4a4a;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.index-button-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.index-button-container button {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 6px 6px 16px rgba(0,0,0,0.1);
+}
+
+.index-button-container button:hover {
+    transform: translateY(-3px);
+    box-shadow: 8px 8px 20px rgba(0,0,0,0.15);
+}
+
+input, button {
+    width: 100%;
+    display: block;
+}
+
+.event-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* space between elements */
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 8px 8px 20px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.rsvp-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.rsvp-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.rsvp-message {
+    margin-bottom: 30px; 
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+}
+
+.rsvp-btn,
+.logout-btn {
+    padding: 12px 25px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.rsvp-btn {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.rsvp-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+.logout-btn:hover {
+    transform: translateY(-2px);
+}
+
+
